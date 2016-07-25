@@ -86,7 +86,7 @@ number of specific historical cases. Pulling radar data from S3, using Syphon to
 fetch observational data and Matplotlib to plot data overlay. 
 This is the hands on component where students will be building code. Students
 will be provided with a python text file with missing blocks and using the
-knowledge gained during the course and with the guidence of the tutors will
+knowledge gained during the course and with the guidance of the tutors will
 create a nice plot. 
 
 Getting it to scale, how to use AWS to set up many processes
@@ -94,7 +94,7 @@ Getting it to scale, how to use AWS to set up many processes
 
 Mark Korver and ??
 How to take what has been learned and get it to scale to many EC2 instances
-using AWS tools. In introduction to scheduling concerpt and the AWS marketplace
+using AWS tools. In introduction to scheduling concept and the AWS marketplace
 
 Questions answers and feedback
 ------------------------------
