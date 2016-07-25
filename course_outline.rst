@@ -40,4 +40,53 @@ AMS Short Course on Interacting with Radar Data in The Cloud
 
     stuff
 
- 
+
+
+.. raw:: pdf
+
+      PageBreak
+
+
+Arrival, introductions and setting up of environments
+-----------------------------------------------------
+
+Time to settle in and say hello.
+
+
+How to set up an instance in the Amazon Cloud
+---------------------------------------------
+
+tuff
+
+An introduction and primer on Python and Scientific Python
+----------------------------------------------------------
+
+stuff
+
+An introduction to Boto, Unidata tools and Py-ART
+-------------------------------------------------
+
+More fun stuff
+
+Lunch
+-----
+
+Details and suggestions
+
+Tying it together, using Boto, Py-ART and Syphon to fetch and plot radar data and observations in the cloud
+-----------------------------------------------------------------------------------------------------------
+
+detailed blocked instructions
+
+Getting it to scale, how to use AWS to set up many processes
+------------------------------------------------------------
+
+How to get it to scale from Mark and the AWS team
+
+
+Questions answers and feedback
+------------------------------
+
+Feedback and further discussion
+ALL
+
