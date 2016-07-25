@@ -51,6 +51,7 @@ Arrival, introductions and setting up of environments
 -----------------------------------------------------
 
 Scott Collis, Jonathan Helmus and Mark Korver
+
 Getting hooked into the wifi, testing connections, dissemination of course
 materials. 
 
@@ -58,6 +59,7 @@ How to set up an instance in the Amazon Cloud
 ---------------------------------------------
 
 Mark Korver
+
 How to configure and set up an EC2 instance. 
 What is S3
 
@@ -66,10 +68,13 @@ An introduction and primer on Python and Scientific Python
 
 Jonathan Helmus and Ryan May
 
+stuff
+
 An introduction to Boto, Unidata tools and Py-ART
 -------------------------------------------------
 
 Scott Collis and Ryan May
+
 Stuff
 
 Lunch
@@ -81,6 +86,7 @@ Tying it together, using Boto, Py-ART and Syphon to fetch and plot radar data an
 -----------------------------------------------------------------------------------------------------------
 
 All Tutors
+
 Group project to build and run some code to create a visualization for one of a
 number of specific historical cases. Pulling radar data from S3, using Syphon to
 fetch observational data and Matplotlib to plot data overlay. 
@@ -93,6 +99,7 @@ Getting it to scale, how to use AWS to set up many processes
 ------------------------------------------------------------
 
 Mark Korver and ??
+
 How to take what has been learned and get it to scale to many EC2 instances
 using AWS tools. In introduction to scheduling concept and the AWS marketplace
 
@@ -100,5 +107,6 @@ Questions answers and feedback
 ------------------------------
 
 All Tutors
+
 Feedback and further discussion
 
