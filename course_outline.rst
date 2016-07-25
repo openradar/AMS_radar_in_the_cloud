@@ -50,23 +50,27 @@ AMS Short Course on Interacting with Radar Data in The Cloud
 Arrival, introductions and setting up of environments
 -----------------------------------------------------
 
-Time to settle in and say hello.
-
+Scott Collis, Jonathan Helmus and Mark Korver
+Getting hooked into the wifi, testing connections, dissemination of course
+materials. 
 
 How to set up an instance in the Amazon Cloud
 ---------------------------------------------
 
-tuff
+Mark Korver
+How to configure and set up an EC2 instance. 
+What is S3
 
 An introduction and primer on Python and Scientific Python
 ----------------------------------------------------------
 
-stuff
+Jonathan Helmus and Ryan May
 
 An introduction to Boto, Unidata tools and Py-ART
 -------------------------------------------------
 
-More fun stuff
+Scott Collis and Ryan May
+Stuff
 
 Lunch
 -----
@@ -76,17 +80,25 @@ Details and suggestions
 Tying it together, using Boto, Py-ART and Syphon to fetch and plot radar data and observations in the cloud
 -----------------------------------------------------------------------------------------------------------
 
-detailed blocked instructions
+All Tutors
+Group project to build and run some code to create a visualization for one of a
+number of specific historical cases. Pulling radar data from S3, using Syphon to
+fetch observational data and Matplotlib to plot data overlay. 
+This is the hands on component where students will be building code. Students
+will be provided with a python text file with missing blocks and using the
+knowledge gained during the course and with the guidence of the tutors will
+create a nice plot. 
 
 Getting it to scale, how to use AWS to set up many processes
 ------------------------------------------------------------
 
-How to get it to scale from Mark and the AWS team
-
+Mark Korver and ??
+How to take what has been learned and get it to scale to many EC2 instances
+using AWS tools. In introduction to scheduling concerpt and the AWS marketplace
 
 Questions answers and feedback
 ------------------------------
 
+All Tutors
 Feedback and further discussion
-ALL
 
