@@ -28,7 +28,7 @@ AMS Short Course on Interacting with Radar Data in The Cloud
 
     On your own
 
-**13:30 - 16:00** `Tying it together, using Boto, Py-ART and Syphon to fetch and plot radar data and observations in the cloud`_::
+**13:30 - 16:00** `Tying it together, using Boto, Py-ART and Siphon to fetch and plot radar data and observations in the cloud`_::
 
     stuff
 
@@ -82,13 +82,13 @@ Lunch
 
 Details and suggestions
 
-Tying it together, using Boto, Py-ART and Syphon to fetch and plot radar data and observations in the cloud
+Tying it together, using Boto, Py-ART and Siphon to fetch and plot radar data and observations in the cloud
 -----------------------------------------------------------------------------------------------------------
 
 All Tutors
 
 Group project to build and run some code to create a visualization for one of a
-number of specific historical cases. Pulling radar data from S3, using Syphon to
+number of specific historical cases. Pulling radar data from S3, using Siphon to
 fetch observational data and Matplotlib to plot data overlay.
 This is the hands on component where students will be building code. Students
 will be provided with a python text file with missing blocks and using the
