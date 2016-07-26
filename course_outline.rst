@@ -18,7 +18,12 @@ AMS Short Course on Interacting with Radar Data in The Cloud
 
 **10:00 - 11:00** `An introduction and primer on Python and Scientific Python`_::
 
-    stuff
+    Python is a general purpose, high-level, interpreted programming language
+    that is widely used for scientific computing. During this session Python
+    will breifly be introduced as a programming language for working with
+    scientific data.  Much of the time will be spent introducing and providing
+    background on some of the key libraries used in the scientific Python
+    ecosystem including NumPy, SciPy, and matplotlib.
 
 **11:00 - 12:00** `An introduction to Boto, Unidata tools and Py-ART`_::
 
