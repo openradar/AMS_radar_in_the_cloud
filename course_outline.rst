@@ -3,16 +3,16 @@ AMS Short Course on Interacting with Radar Data in The Cloud
 
 
 **08:30 - 09:00** `Arrival, introductions and setting up of environments`_::
-    
-    Particpants will arrive at Amazon by 8:30 and will be shown to the tutorial
+
+    Participants will arrive at Amazon by 8:30 and will be shown to the tutorial
     room
 
     Wifi will be set up and course materials distributed
 
 **09:00 - 10:00** `How to set up an instance in the Amazon Cloud`_::
-    
+
     An introduction to the concepts of virtualization and Elastic Cloud Compute
-    (EC2) instances 
+    (EC2) instances
 
     Installation on the EC2 instance of software required for the tutorial
 
@@ -53,14 +53,14 @@ Arrival, introductions and setting up of environments
 Scott Collis, Jonathan Helmus and Mark Korver
 
 Getting hooked into the wifi, testing connections, dissemination of course
-materials. 
+materials.
 
 How to set up an instance in the Amazon Cloud
 ---------------------------------------------
 
 Mark Korver
 
-How to configure and set up an EC2 instance. 
+How to configure and set up an EC2 instance.
 What is S3
 
 An introduction and primer on Python and Scientific Python
@@ -89,11 +89,11 @@ All Tutors
 
 Group project to build and run some code to create a visualization for one of a
 number of specific historical cases. Pulling radar data from S3, using Syphon to
-fetch observational data and Matplotlib to plot data overlay. 
+fetch observational data and Matplotlib to plot data overlay.
 This is the hands on component where students will be building code. Students
 will be provided with a python text file with missing blocks and using the
 knowledge gained during the course and with the guidance of the tutors will
-create a nice plot. 
+create a nice plot.
 
 Getting it to scale, how to use AWS to set up many processes
 ------------------------------------------------------------
@@ -109,4 +109,3 @@ Questions answers and feedback
 All Tutors
 
 Feedback and further discussion
-
