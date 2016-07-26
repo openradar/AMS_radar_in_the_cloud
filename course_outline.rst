@@ -22,7 +22,14 @@ AMS Short Course on Interacting with Radar Data in The Cloud
 
 **11:00 - 12:00** `An introduction to Boto, Unidata tools and Py-ART`_::
 
-    stuff
+    During this section additional Python tools, Boto, Siphon, THREDDS, and
+    Py-ART, are introducts. These tools are needed or useful for accessing the
+    NEXRAD Level 2 archive on Amazon Simple Storage Server (S3). This section
+    will walk through using Boto, Amazon's Python library for talking to AWS,
+    to access files on S3. Unidata's THREDDS server, and its Siphon Python
+    client, will be introduced as a way for accessing the radar data using
+    OPeNDAP and for querying available data files. Finally, Py-ART will be
+    discussed as a Pythonic solution for analyzing and displaying radar data.
 
 **12:00 - 13:30** `Lunch`_::
 
