@@ -38,19 +38,24 @@ AMS Short Course on Interacting with Radar Data in The Cloud
 
 **12:00 - 13:30** `Lunch`_::
 
-    On your own
+    On your own. 
 
 **13:30 - 16:00** `Tying it together, using Boto, Py-ART and Siphon to fetch and plot radar data and observations in the cloud`_::
 
-    stuff
+    Group activities where we will use code discussed from earlier to build an
+    EC2 instance and python file that can fetch radar and other observations and
+    produce a visualization for any site and time in the archive. 
 
 **16:00 - 17:00** `Getting it to scale, how to use AWS to set up many processes`_::
 
-    stuff
+    Radar data processing, in general tends to be very pleasantly parallel. This
+    section will discuss how you can use instances and Amazon's scheduling tools
+    to map many time steps or many sites into a cloud of processes.
 
 **17:00 - 17:30** `Questions answers and feedback`_::
 
-    stuff
+    A chance to ask the tutors questions, present your own use cases and find
+    out what is next. 
 
 
 
@@ -72,27 +77,41 @@ How to set up an instance in the Amazon Cloud
 
 Mark Korver
 
-How to configure and set up an EC2 instance.
-What is S3
+An introduction to how to set up an EC2 instance and start it running. How to
+log into it via SSH and how to 
 
 An introduction and primer on Python and Scientific Python
 ----------------------------------------------------------
 
 Jonathan Helmus and Ryan May
 
-stuff
+ Python is a general purpose, high-level, interpreted programming language
+    that is widely used for scientific computing. During this session Python
+    will breifly be introduced as a programming language for working with
+    scientific data.  Much of the time will be spent introducing and providing
+    background on some of the key libraries used in the scientific Python
+    ecosystem including NumPy, SciPy, and matplotlib.
+
 
 An introduction to Boto, Unidata tools and Py-ART
 -------------------------------------------------
 
 Scott Collis and Ryan May
 
-Stuff
+    During this section additional Python tools, Boto, Siphon, THREDDS, and
+    Py-ART, are introducts. These tools are needed or useful for accessing the
+    NEXRAD Level 2 archive on Amazon Simple Storage Server (S3). This section
+    will walk through using Boto, Amazon's Python library for talking to AWS,
+    to access files on S3. Unidata's THREDDS server, and its Siphon Python
+    client, will be introduced as a way for accessing the radar data using
+    OPeNDAP and for querying available data files. Finally, Py-ART will be
+    discussed as a Pythonic solution for analyzing and displaying radar data.
+
 
 Lunch
 -----
 
-Details and suggestions
+Details and suggestions will go here closer to the workshop date. 
 
 Tying it together, using Boto, Py-ART and Siphon to fetch and plot radar data and observations in the cloud
 -----------------------------------------------------------------------------------------------------------
@@ -110,10 +129,11 @@ create a nice plot.
 Getting it to scale, how to use AWS to set up many processes
 ------------------------------------------------------------
 
-Mark Korver and ??
+Mark Korver and Scott Collis
 
-How to take what has been learned and get it to scale to many EC2 instances
-using AWS tools. In introduction to scheduling concept and the AWS marketplace
+    Radar data processing, in general tends to be very pleasantly parallel. This
+    section will discuss how you can use instances and Amazon's scheduling tools
+    to map many time steps or many sites into a cloud of processes.
 
 Questions answers and feedback
 ------------------------------
