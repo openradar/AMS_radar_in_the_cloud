@@ -78,7 +78,7 @@ How to set up an instance in the Amazon Cloud
 Mark Korver
 
 An introduction to how to set up an EC2 instance and start it running. How to
-log into it via SSH and how to 
+log into it via SSH and how to run code and get results.  
 
 An introduction and primer on Python and Scientific Python
 ----------------------------------------------------------
