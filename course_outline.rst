@@ -146,3 +146,8 @@ Questions answers and feedback
 All Tutors
 
 Feedback and further discussion
+
+
+
+Render this document as pdf by ``rst2pdf course_outline.rst``
+
