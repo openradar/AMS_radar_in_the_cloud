@@ -1,6 +1,11 @@
 AMS Short Course on Interacting with Radar Data in The Cloud
 ============================================================
 
+.. image:: images/evolution.png
+   :scale: 150 %
+   :alt: Evolution of storage
+   :align: center
+   :target: http://www.gusmorais.com/
 
 **08:30 - 09:00** `Arrival, introductions and setting up of environments`_::
 
