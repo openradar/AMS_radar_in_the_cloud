@@ -5,9 +5,11 @@ cd ~
 #wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda2-2.4.0-Linux-x86_64.sh
 wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
 bash Anaconda3-4.2.0-Linux-x86_64.sh -b
-echo 'PATH="/home/ubuntu/anaconda3/bin:$PATH"' >> .bashrc
 
-source ~/.bashrc
+echo "APPENDING PATH"
+cd ~
+echo 'PATH="/home/ubuntu/anaconda3/bin:$PATH"' >> .bashrc
+source .bashrc
 
 
 conda update conda
