@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 #Code adapted from https://gist.github.com/yangj1e/3641843c758201ebbc6c (Modified to Python3.5)
 
+sudo apt-get -y update
+sudo apt-get -y install gcc gfortran
+
 cd ~
 #wget https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda2-2.4.0-Linux-x86_64.sh
 wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
@@ -11,18 +14,17 @@ cd ~
 echo 'PATH="/home/ubuntu/anaconda3/bin:$PATH"' >> .bashrc
 source .bashrc
 
-
-conda update conda
+/home/ubuntu/anaconda3/bin/conda update -y conda
 
 #provision 
 
-conda install -y basemap scipy cartopy boto netCDF4
+/home/ubuntu/anaconda3/bin/conda install -y basemap scipy cartopy boto netCDF4
 
 git clone https://github.com/ARM-DOE/pyart
 
 cd ~/pyart
 
-python setup.py install
+/home/ubuntu/anaconda3/bin/python setup.py install
 
 cd ~
 
