@@ -11,8 +11,10 @@ bash Anaconda3-4.2.0-Linux-x86_64.sh -b
 
 echo "APPENDING PATH"
 cd ~
-echo 'PATH="/home/ubuntu/anaconda3/bin:$PATH"' >> .bashrc
-source .bashrc
+
+. .bashrc
+
+export VARNAME='PATH="/home/ubuntu/anaconda3/bin:$PATH"'
 
 /home/ubuntu/anaconda3/bin/conda update -y conda
 
