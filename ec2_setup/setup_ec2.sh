@@ -30,11 +30,11 @@ cd ~/pyart
 
 cd ~
 
-jupyter notebook --generate-config
+/home/ubuntu/anaconda3/bin/jupyter notebook --generate-config
 
 echo "ENTER YOUR PASSWORD"
 
-key=$(python -c "from notebook.auth import passwd; print(passwd())")
+key=$(/home/ubuntu/anaconda3/bin/python -c "from notebook.auth import passwd; print(passwd())")
 
 cd ~
 mkdir certs
