@@ -35,21 +35,12 @@ $conda_bin_path'conda' update -y conda
 
 #provision
 
-echo '----------------------------'
-echo 'Provisioning via Conda Forge'
-echo '----------------------------'
+echo '----------------------------------'
+echo 'Provisioning the Conda environment'
+echo '----------------------------------'
 
-$conda_bin_path'conda' install -y -c scitools cartopy
-
-echo '----------------------'
-echo 'Provisioning via Conda'
-echo '----------------------'
-
-$conda_bin_path'conda' install -y basemap scipy boto netCDF4
-
-echo '----------------------'
-echo 'Provisioning via Pip'
-echo '----------------------'
+$conda_bin_path'conda' env create -f ec2_setup/environment.yml
+source activate ams-workshop
 
 echo '-------------------------'
 echo 'Pyart Install from source'
