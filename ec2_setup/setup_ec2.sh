@@ -35,17 +35,17 @@ $conda_bin_path'conda' update -y conda
 
 #provision
 
-echo '----------------------'
-echo 'Provisioning via Conda'
-echo '----------------------'
-
-$conda_bin_path'conda' install -y basemap scipy boto netCDF4
-
 echo '----------------------------'
 echo 'Provisioning via Conda Forge'
 echo '----------------------------'
 
 $conda_bin_path'conda' install -y -c scitools cartopy
+
+echo '----------------------'
+echo 'Provisioning via Conda'
+echo '----------------------'
+
+$conda_bin_path'conda' install -y basemap scipy boto netCDF4
 
 echo '----------------------'
 echo 'Provisioning via Pip'
