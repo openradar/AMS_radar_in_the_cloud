@@ -1,0 +1,17 @@
+ name: ams-workshop
+ channels:
+   - conda-forge
+ dependencies:
+   - python=3.5
+   - numpy
+   - matplotlib
+   - cartopy
+   - jupyter
+   - netcdf4
+   - metpy
+   - siphon
+   - xarray
+   - scipy
+   - boto3
+   - basemap
+
