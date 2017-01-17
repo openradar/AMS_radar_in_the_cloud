@@ -62,9 +62,9 @@ mkdir certs
 cd certs
 certdir=$(pwd)
 
-echo "IF YOU WANT, ENTER YOUR DETAILS OR JUST PRESS ENTER"
-
-openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.key -out mycert.pem
+openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 \
+    -subj "/C=XX/ST=XX/L=XX/O=generated/CN=generated" \
+    -keyout mycert.key -out mycert.pem
 
 cd ~
 sed -i "1 a\
@@ -84,6 +84,7 @@ echo '---------------------'
 echo ' '
 echo 'To Run execute'
 echo '. ~/.bashrc'
+echo 'source activate ams-workshop'
 echo 'jupyter notebook --certfile=~/certs/mycert.pem --keyfile ~/certs/mycert.key'
 echo 'You can then point your browser at : https://ec2-A-B-C-D.compute-1.amazonaws.com:8888'
 echo 'where  https://ec2-A-B-C-D.compute-1.amazonaws.com is the FQDN of the instance'
