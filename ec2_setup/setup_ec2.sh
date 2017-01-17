@@ -21,36 +21,30 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 #For some reason updating path and sourcing bashrc does not work
 #during the script so we use the FQ path
 
-conda_bin_path="/home/ubuntu/miniconda3/bin/"
 
 echo "APPENDING PATH"
 cd ~
-echo 'PATH="/home/ubuntu/miniconda3/bin:$PATH"' >> .bashrc
+echo 'PATH="$HOME/miniconda3/bin:$PATH"' >> .bashrc
+export PATH="$HOME/miniconda3/bin:$PATH"
 
-. .bashrc
-
-#export VARNAME='PATH="/home/ubuntu/miniconda3/bin:$PATH"'
-
-$conda_bin_path'conda' update -y conda
-
-#provision
+conda update -y conda
 
 echo '----------------------------------'
 echo 'Provisioning the Conda environment'
 echo '----------------------------------'
 
-$conda_bin_path'conda' env create -f ec2_setup/environment.yml
+conda env create -f ec2_setup/environment.yml
 source activate ams-workshop
 
 echo '-------------------------'
 echo 'Pyart Install from source'
 echo '-------------------------'
 
-git clone https://github.com/ARM-DOE/pyart
+wget https://github.com/ARM-DOE/pyart/archive/master.tar.gz
+tar xf master.tar.gz
+cd ~/pyart-master
+python setup.py install
 
-cd ~/pyart
-
-$conda_bin_path'python' setup.py install
 
 echo '----------------------------'
 echo 'Configuring Jupyter Notebook'
@@ -58,11 +52,11 @@ echo '----------------------------'
 
 cd ~
 
-$conda_bin_path'jupyter' notebook --generate-config
+jupyter notebook --generate-config
 
 echo "ENTER YOUR PASSWORD"
 
-key=$($conda_bin_path'python' -c "from notebook.auth import passwd; print(passwd())")
+key=$(python -c "from notebook.auth import passwd; print(passwd())")
 
 cd ~
 mkdir certs
