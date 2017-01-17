@@ -31,6 +31,8 @@ echo '----------------------------------'
 echo 'Provisioning the Conda environment'
 echo '----------------------------------'
 
+cd $HOME/AMS_radar_in_the_cloud/ec2_setup/
+
 conda env create -f environment.yml
 source activate ams-workshop
 
