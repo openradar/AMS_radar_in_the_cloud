@@ -12,7 +12,7 @@
    - siphon
    - xarray
    - scipy
-   - boto3
    - boto
    - basemap
+   - boto3
 
