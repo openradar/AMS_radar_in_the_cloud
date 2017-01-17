@@ -14,7 +14,6 @@ echo '--------------------'
 echo 'Installing Miniconda'
 echo '--------------------'
 
-cd ~
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh -b
 
@@ -23,8 +22,7 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 
 
 echo "APPENDING PATH"
-cd ~
-echo 'PATH="$HOME/miniconda3/bin:$PATH"' >> .bashrc
+echo 'PATH="$HOME/miniconda3/bin:$PATH"' >> ~/.bashrc
 export PATH="$HOME/miniconda3/bin:$PATH"
 
 conda update -y conda
@@ -33,13 +31,14 @@ echo '----------------------------------'
 echo 'Provisioning the Conda environment'
 echo '----------------------------------'
 
-conda env create -f ec2_setup/environment.yml
+conda env create -f environment.yml
 source activate ams-workshop
 
 echo '-------------------------'
 echo 'Pyart Install from source'
 echo '-------------------------'
 
+cd ~
 wget https://github.com/ARM-DOE/pyart/archive/master.tar.gz
 tar xf master.tar.gz
 cd ~/pyart-master
