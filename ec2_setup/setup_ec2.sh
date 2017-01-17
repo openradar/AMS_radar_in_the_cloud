@@ -45,7 +45,7 @@ echo '----------------------------'
 echo 'Provisioning via Conda Forge'
 echo '----------------------------'
 
-$conda_bin_path'conda' install -c scitools cartopy
+$conda_bin_path'conda' install -y -c scitools cartopy
 
 echo '----------------------'
 echo 'Provisioning via Pip'
