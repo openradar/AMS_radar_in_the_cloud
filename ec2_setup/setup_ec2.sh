@@ -10,26 +10,26 @@ echo '--------'
 sudo apt-get -y update
 sudo apt-get -y install gcc gfortran
 
-echo '-------------------'
-echo 'Installing Anaconda'
-echo '-------------------'
+echo '--------------------'
+echo 'Installing Miniconda'
+echo '--------------------'
 
 cd ~
-wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
-bash Anaconda3-4.2.0-Linux-x86_64.sh -b
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b
 
 #For some reason updating path and sourcing bashrc does not work
 #during the script so we use the FQ path
 
-conda_bin_path="/home/ubuntu/anaconda3/bin/" 
+conda_bin_path="/home/ubuntu/miniconda3/bin/"
 
 echo "APPENDING PATH"
 cd ~
-echo 'PATH="/home/ubuntu/anaconda3/bin:$PATH"' >> .bashrc
+echo 'PATH="/home/ubuntu/miniconda3/bin:$PATH"' >> .bashrc
 
 . .bashrc
 
-#export VARNAME='PATH="/home/ubuntu/anaconda3/bin:$PATH"'
+#export VARNAME='PATH="/home/ubuntu/miniconda3/bin:$PATH"'
 
 $conda_bin_path'conda' update -y conda
 
