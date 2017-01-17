@@ -15,7 +15,7 @@ echo '-------------------'
 
 
 cd ~
-get https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
 bash Anaconda3-4.2.0-Linux-x86_64.sh -b
 
 #For some reason updating path and sourcing bashrc does not work
