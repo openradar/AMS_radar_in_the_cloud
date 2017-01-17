@@ -52,12 +52,24 @@ echo '----------------------------'
 cd ~
 
 jupyter notebook --generate-config
+
 echo "ENTER YOUR PASSWORD"
+
 key=$(python -c "from notebook.auth import passwd; print(passwd())")
+
+cd ~
+mkdir certs
+cd certs
+certdir=$(pwd)
+
+echo "IF YOU WANT, ENTER YOUR DETAILS OR JUST PRESS ENTER"
+
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.key -out mycert.pem
 
 cd ~
 sed -i "1 a\
 c = get_config()\\
+c.NotebookApp.certfile = u'$certdir/mycert.pem'\\
 c.NotebookApp.ip = '*'\\
 c.NotebookApp.open_browser = False\\
 c.NotebookApp.password = u'$key'\\
@@ -72,11 +84,11 @@ echo '---------------------'
 echo ' '
 echo 'To Run execute'
 echo '. ~/.bashrc'
-echo 'source activate ams-workshop'
-echo 'jupyter notebook'
-echo 'You can then point your browser at : http://ec2-A-B-C-D.compute-1.amazonaws.com:8888'
-echo 'where  http://ec2-A-B-C-D.compute-1.amazonaws.com is the FQDN of the instance'
+echo 'jupyter notebook --certfile=~/certs/mycert.pem --keyfile ~/certs/mycert.key'
+echo 'You can then point your browser at : https://ec2-A-B-C-D.compute-1.amazonaws.com:8888'
+echo 'where  https://ec2-A-B-C-D.compute-1.amazonaws.com is the FQDN of the instance'
 echo 'Note: You will need to add a certificate exception in your browser'
 
 echo "Our GUESS (prone to breakage) is:"
 echo $guess_at_aws_fqdn
+
