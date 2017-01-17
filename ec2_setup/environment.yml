@@ -13,5 +13,6 @@
    - xarray
    - scipy
    - boto3
+   - boto
    - basemap
 
