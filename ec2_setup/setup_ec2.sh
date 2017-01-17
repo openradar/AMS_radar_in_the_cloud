@@ -68,3 +68,15 @@ c.NotebookApp.ip = '*'\\
 c.NotebookApp.open_browser = False\\
 c.NotebookApp.password = u'$key'\\
 c.NotebookApp.port = 8888" .jupyter/jupyter_notebook_config.py
+
+echo '---------------------'
+echo 'Installation complete'
+echo '---------------------'
+echo ' '
+echo 'To Run execute'
+echo '. ~/.bashrc'
+echo 'jupyter notebook --certfile=~/certs/mycert.pem --keyfile ~/certs/mycert.key'
+echo 'You can then point your browser at : https://ec2-A-B-C-D.compute-1.amazonaws.com:8888'
+echo 'where  https://ec2-A-B-C-D.compute-1.amazonaws.com is the FQDN of the instance'
+echo 'Note: You will need to add a certificate exception in your browser'
+
