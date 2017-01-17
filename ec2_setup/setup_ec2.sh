@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+#Shell script to provision an Ubuntu EC2 instance with a Py-ART Jupyter notebook
+#Environment. Instance must have 8888 and https open
 #Code adapted from https://gist.github.com/yangj1e/3641843c758201ebbc6c (Modified to Python3.5)
-
 
 echo '--------'
 echo 'Apt Gets'
@@ -12,7 +13,6 @@ sudo apt-get -y install gcc gfortran
 echo '-------------------'
 echo 'Installing Anaconda'
 echo '-------------------'
-
 
 cd ~
 wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
@@ -33,15 +33,37 @@ echo 'PATH="/home/ubuntu/anaconda3/bin:$PATH"' >> .bashrc
 
 $conda_bin_path'conda' update -y conda
 
-#provision 
+#provision
+
+echo '----------------------'
+echo 'Provisioning via Conda'
+echo '----------------------'
 
 $conda_bin_path'conda' install -y basemap scipy boto netCDF4
+
+echo '----------------------------'
+echo 'Provisioning via Conda Forge'
+echo '----------------------------'
+
+$conda_bin_path'conda' install -c scitools cartopy
+
+echo '----------------------'
+echo 'Provisioning via Pip'
+echo '----------------------'
+
+echo '-------------------------'
+echo 'Pyart Install from source'
+echo '-------------------------'
 
 git clone https://github.com/ARM-DOE/pyart
 
 cd ~/pyart
 
 $conda_bin_path'python' setup.py install
+
+echo '----------------------------'
+echo 'Configuring Jupyter Notebook'
+echo '----------------------------'
 
 cd ~
 
