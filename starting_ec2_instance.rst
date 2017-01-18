@@ -96,11 +96,136 @@ it should look like this:
    :alt: alternate text
    :align: center
 
-Now we can click the **blue** button "Review and Launch".
+9) Now we can click the **blue** button "Review and Launch". You will be presented with a page like this for one final check.
+
+.. image:: images/setup8_final.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+10) click Launch and a dialog pops up like this:
+
+.. image:: images/setup9_keys.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+The top drop down can be either "use existing pair", "create new pair" or
+"proceed without pair". Select "Create new pair", in the text entry below think
+of a good name (eg "jupyter") and click on download key pair. A save dialog will
+pop up *REMEBER WHERE YOU SAVED IT!* we will call this "/path/to/key/" in future
+reference so the key is at "/path/to/key/key_name.pem".
+
+Once you have downloaded the key the **blue** "Launch Instance" button will be
+un-grayed and you can click it!
+
+11) You will now have a screen like this (after a spinning wheel screen):
+
+.. image:: images/setup10_up.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+click on the hyperlink starting with "i", in our case "i-072690e17232cbc27". You
+will get a window like the one below. *Some entries may be blank until the
+instance comes up*. 
+
+.. image:: images/setup11_instanceup.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
 
 
-[1]
 
-[2]
+Second: Logging into your instance
+----------------------------------
+12) You will need an SSH client. These instructions will vary from client to
+client. Initially this tutorial will have instructions for a terminal based
+client available on Linux and MacOS/OSX. 
+
+Select and copy the domain name next to "Public DNS". First we we need to change
+the permissions on the key file.
+
+to  Go to a terminal and type:
+
+chmod 400 /path/to/key/key.pem (replace with your actual path to your key).
+
+"ssh -i /path/to/key/key_name.pem ubuntu@" and copy paste the domain name to the
+end of the file.. Hit enter and answer "yes" when it asks if you want to continue connecting. **YES! You are now logged into your instance!**.
+ What you will have is something like:
+
+.. image:: images/setup14_ssh1.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+
+Third: Provisioning your instance
+---------------------------------
+13) We now need to load on software we use for the course. This will involve
+executing a shell script located in the course GitHub Repository.
+
+In the shell type: "git clone https://github.com/openradar/AMS_radar_in_the_cloud", hit enter/return this will clone the remote repository into your local machine. 
+
+Then, at the prompt type: "source AMS_radar_in_the_cloud/ec2_setup/setup_ec2.sh"
+you will have a terminal that will look something like this:
+
+.. image:: images/setup15_pre_prov.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+Hit enter/return and all kinds of magic will start happening! 
+
+The script will pause for some time after "jupyter-1.0.0- 100% ..". 
+
+14) After some time the script will prompt you for a password. Enter something,
+enter it again.. **remeber it!**
+
+Fourth: Starting the Jupyter notebook
+-------------------------------------
+15) After the script finishes it should finish with a set of lines like this:
+
+.. image:: images/setup16_done.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+In the command line run the lines (By copy pasting if you choose):
+
+. ~/.bashrc
+
+source activate ams-workshop
+
+jupyter notebook --certfile=~/certs/mycert.pem --keyfile ~/certs/mycert.key
+
+16) The Jupyter notebook has now started! Huzzah! Your terminal should look like
+this: 
+
+.. image:: images/setup17_huzzah.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+One last step.. You can see a line after "Our GUESS (prone to breakage) is:".
+This is the expected location of your Jupyter notebook server.. Copy that line
+to the clipboard and open a browser window.. Our example here uses Firefox.
+Paste the address in the "Search or enter address" text entry box and press
+enter. You should get a screen like this:
+
+.. image:: images/setup18_trust.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+**ONLY EVER DO THIS FOR SITES YOU COMPLETELY TRUST**. Click "Advanced" and then
+click "Add Exception". A window will drop down, click "Confirm security
+exception". **Bingo** you should now be presented with a page asking for your
+password.. enter it and you are good to go!
+
+
+[1] http://jupyter.org/
+
+[2] https://www.continuum.io/downloads
 
 [3] https://aws.amazon.com/ec2/pricing/on-demand/
