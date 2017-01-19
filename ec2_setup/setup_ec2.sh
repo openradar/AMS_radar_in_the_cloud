@@ -46,12 +46,24 @@ tar xf master.tar.gz
 cd ~/pyart-master
 python setup.py install
 
+cd ~
+
+echo '-----------------------'
+echo 'Provisioning test file '
+echo 'To order ARM data go to'
+echo '     www.arm.gov       '
+echo '-----------------------'
+
+wget https://s3.amazonaws.com/amsworkshop/110635.mdv
+
+#WARNING: Temporary ARM file. This will be changed at a later date 
+#Do not use this file for anything but the course. 
+
 
 echo '----------------------------'
 echo 'Configuring Jupyter Notebook'
 echo '----------------------------'
 
-cd ~
 
 jupyter notebook --generate-config
 
