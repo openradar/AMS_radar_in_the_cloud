@@ -14,5 +14,6 @@
    - scipy
    - boto
    - basemap
+   - basemap-data-hires
    - boto3
 
