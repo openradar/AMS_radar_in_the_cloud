@@ -223,6 +223,11 @@ click "Add Exception". A window will drop down, click "Confirm security
 exception". **Bingo** you should now be presented with a page asking for your
 password.. enter it and you are good to go!
 
+**NOTE FOR SAFARI USERS:** Do not just hit "continue".. This will allow you to
+get into the notebook server but the kernel will not be able to connect.. Click
+"Show Certificate" and click the upper left hand radio button to accept the
+generate certificate.
+
 
 [1] http://jupyter.org/
 
