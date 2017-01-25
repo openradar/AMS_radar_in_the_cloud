@@ -11,7 +11,7 @@ the EC2 instance with Anaconda Python [2] and the tools required for the course
 and, finally, to start the Jupyer notebook server and connect to it using a web
 browser. 
 
-First: Stanting an EC2 instance
+First: Starting an EC2 instance
 -------------------------------
 1) Point your browser at https://aws.amazon.com/ and click "sign into the console" in the top right hand corner. 
 2) Log in with the credentials you generated using the pre-course instructions,
